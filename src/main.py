@@ -27,8 +27,8 @@ def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
 
     tda = pyscf.tdscf.TDA(mf)
     tda.nstates = 10
-    rpa.max_space = 200
-    rpa.max_cycle = 2000
+    tda.max_space = 200
+    tda.max_cycle = 2000
     tda.kernel()
 
     con_tda = tda.converged
