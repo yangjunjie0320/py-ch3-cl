@@ -18,6 +18,7 @@ def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
     if xc is not None and xc != "hf":
         mf = pyscf.scf.RKS(mol)
         mf.xc = xc
+        mf.grids.level = 9
         mf.kernel()
     else:
         mf = pyscf.scf.RHF(mol)
