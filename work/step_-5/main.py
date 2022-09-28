@@ -57,4 +57,4 @@ def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
 
 if __name__ == "__main__":
     xyz = sys.argv[1]
-    main(xyz, basis="631g*", xc="b3lyp", output="out.log")
+    main(xyz, basis="6311g**", xc="b3lyp", output="out.log")
