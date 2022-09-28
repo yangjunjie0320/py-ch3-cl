@@ -1,5 +1,6 @@
 import sys
 import pyscf
+from pyscf import tdscf
 
 def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
     xyz = None
