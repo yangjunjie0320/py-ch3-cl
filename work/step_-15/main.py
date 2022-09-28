@@ -26,8 +26,8 @@ def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
     ene_mf = mf.e_tot
 
     tda = pyscf.tdscf.TDA(mf)
-    tda.nstates = 50
-    tda.max_space = 600
+    tda.nstates = 5
+    tda.max_space = 8
     tda.max_cycle = 2000
     tda.kernel()
 
@@ -36,8 +36,8 @@ def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
     dip_tda = tda.transition_dipole()[:5]
 
     rpa = pyscf.tdscf.RPA(mf)
-    rpa.nstates = 50
-    rpa.max_space = 600
+    rpa.nstates = 5
+    rpa.max_space = 8
     rpa.max_cycle = 2000
     rpa.kernel()
 
