@@ -4,7 +4,6 @@ for i in $(ls ./data/xyz/*.xyz); do
     echo $name
 
     rm -rf ./work/$name/*
-    mkdir ./work/$name
     
     cp ./data/xyz/$name.xyz ./work/$name/py-ch3-cl.xyz
     cp ./src/run.sh  ./work/$name/run.sh

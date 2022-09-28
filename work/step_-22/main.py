@@ -4,7 +4,7 @@ import pyscf
 def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
     xyz = None
 
-    with open("../../data/xyz/" + xyz_file, "r") as xyz:
+    with open(xyz_file, "r") as xyz:
         xyz = xyz.readlines()[2:]
         xyz = "".join(xyz)
 

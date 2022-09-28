@@ -1,6 +1,0 @@
-SLURM_CPUS_PER_TASK = 28
-SLURM_MEM_PER_NODE = 127949
-  File "main.py", line 40
-    f.write(f"RKS energy: {ene_mf: 12.8f}\n")
-                                           ^
-SyntaxError: invalid syntax
