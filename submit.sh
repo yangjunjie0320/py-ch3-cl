@@ -10,7 +10,7 @@ for i in $(ls ./data/xyz/*.xyz); do
     cp ./src/run.sh  ./work/$name/run.sh
     cp ./src/main.py ./work/$name/main.py
 
-    # cd ./work/$name;
-    # sbatch run.sh;
-    # cd -;
+    cd ./work/$name;
+    sbatch run.sh;
+    cd -;
 done
