@@ -3,6 +3,7 @@ for i in $(ls ./data/xyz/*.xyz); do
     name=${tmp:11}
     echo $name
 
+    mkdir -p ./work/$name/
     rm -rf ./work/$name/*
     
     cp ./data/xyz/$name.xyz ./work/$name/py-ch3-cl.xyz
@@ -10,6 +11,6 @@ for i in $(ls ./data/xyz/*.xyz); do
     cp ./src/main.py ./work/$name/main.py
 
     cd ./work/$name;
-    sbatch run.sh;
+    # sbatch run.sh;
     cd -;
 done
