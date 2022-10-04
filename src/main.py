@@ -27,7 +27,7 @@ def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
     ene_mf = mf.e_tot
 
     with open(output, "w") as f:
-        tda = pyscf.tdscf.TDA(mf)
+        tda = pyscf.tdscf.CIS(mf)
         tda.nstates = 5
         tda.max_space = 8
         tda.max_cycle = 2000
@@ -58,4 +58,4 @@ def main(xyz_file, basis="631g*", xc="b3lyp", output="ene.out"):
 
 if __name__ == "__main__":
     xyz = sys.argv[1]
-    main(xyz, basis="6311g**", xc="b3lyp", output="out.log")
+    main(xyz, basis="6-311g**", xc=None, output="out.log")

@@ -11,6 +11,6 @@ for i in $(ls ./data/xyz/*.xyz); do
     cp ./src/main.py ./work/$name/main.py
 
     cd ./work/$name;
-    # sbatch run.sh;
+    sbatch run.sh;
     cd -;
 done
